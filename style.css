@@ -1,0 +1,434 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+li,
+button,
+label,
+input,
+p {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 4.8rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4,
+h5 {
+  font-size: 2.8rem;
+}
+
+a {
+  color: #f17539;
+  text-decoration: none;
+}
+
+button {
+  padding: 1.5rem 3rem;
+  background: #f17539;
+  border: none;
+  font-size: 1.8rem;
+
+  cursor: pointer;
+  transition: background 0.5s ease-in-out;
+}
+
+button:hover {
+  background: #2e2e2e;
+  color: #f17539;
+}
+
+/* Nav Section and Hero */
+
+.main-head {
+  background-color: #2e2e2e;
+  color: #f17539;
+  position: sticky;
+  top: 0px;
+  z-index: 3;
+}
+
+nav {
+  min-height: 10vh;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+#logo {
+  display: flex;
+  flex: 2 1 40rem;
+  font-family: "Bebas Neue", cursive;
+  font-weight: 400;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("./logo/brown-mountain-3955027.jpg");
+  min-height: 90vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-shadow: 1px 1px 5px black;
+  animation: slide 15s infinite;
+}
+
+@keyframes slide {
+  0% {
+    background-image: url("./logo/brown-mountain-3955027.jpg");
+  }
+  33% {
+    background-image: url("./logo/mountain-and-body-of-water-2798477.jpg");
+  }
+  53% {
+    background-image: url("./logo/photography-of-mountains-near-body-of-water-846350.jpg");
+  }
+  67% {
+    background-image: url("./logo/aerial-shot-of-five-boats-on-the-ocean-2331588.jpg");
+  }
+
+  89% {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+      url("./logo/scenic-view-of-ocean-during-sunset-1032650.jpg");
+  }
+}
+
+.hero h3 {
+  padding: 5rem;
+  font-weight: lighter;
+}
+
+/* about kuya setion */
+
+.intro {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #2e2e2e;
+}
+
+.secondmain {
+  display: flex;
+  min-height: 70vh;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  padding: 2rem;
+  flex-wrap: wrap;
+  background: #2e2e2e;
+}
+
+.intro img {
+  width: 100%;
+  padding: 0rem 2rem;
+}
+
+.intro-img {
+  flex: 1 1 30rem;
+  background: #2e2e2e;
+}
+
+.intro-text {
+  flex: 2 1 50rem;
+  background: #2e2e2e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  font-family: "Poppins", sans-serif;
+}
+.intro h2 {
+  min-height: 30vh;
+  margin-top: 1rem;
+  flex: 1 1 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-shadow: 1px 1px 5px black;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 5rem;
+  color: #f17539;
+}
+
+.intro-text p {
+  flex: 1 1 30rem;
+  padding: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+/* end of hero section */
+
+/* location section */
+#locations {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("./img/2ndcover.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.locations-head {
+  width: 90%;
+  margin: auto;
+}
+
+.locations-head h2 {
+  padding: 1rem 0rem;
+  text-decoration: underline;
+  color: white;
+  font-size: 4rem;
+}
+
+.locations-head h3 {
+  padding: 4rem 0rem;
+  font-size: 2.5rem;
+  color: #f17539;
+  padding: 1rem;
+  text-shadow: 1px 1px 5px black;
+}
+
+.cloud {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  pointer-events: none;
+}
+
+.moving-cloud-1 {
+  animation: cloudAnimation 3s infinite alternate ease-in-out;
+  z-index: -1;
+  height: 80%;
+}
+
+.moving-cloud-2 {
+  top: 20%;
+  z-index: -2;
+  opacity: 0.5;
+  height: 70%;
+  animation: cloudAnimation 3.5s infinite alternate ease-in-out;
+}
+
+@keyframes cloudAnimation {
+  from {
+    transform: translate(10%, -20%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
+}
+
+/* endl of location section */
+
+/* benefits section */
+
+.benefits-head {
+  background: #f17539;
+  padding: 3rem;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.benefits-head h3 {
+  padding: 1rem;
+}
+
+.cards {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  min-height: 60vh;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  text-align: center;
+  background: white;
+  flex: 1 1 25rem;
+  min-height: 40vh;
+  margin: 2rem 5rem;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2), 0px 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cards img {
+  max-width: 15%;
+  margin: 2rem;
+}
+
+.card h4,
+p {
+  padding: 0.5rem;
+}
+
+.card-icon {
+  background: #f17539;
+}
+
+/* end benefits section */
+
+/*contact section */
+
+#contact {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("./img/cover3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-wrapper {
+  background: rgba(46, 46, 46, 0.31);
+  width: 60%;
+  color: white;
+  border-radius: 20px;
+}
+
+.form-head {
+  text-align: center;
+  padding: 4rem;
+}
+
+.name-form,
+.email-form {
+  padding: 3rem;
+  text-align: center;
+}
+
+.form-wrapper label {
+  margin: 0rem 3rem;
+}
+
+.form-wrapper button {
+  width: 100%;
+  padding: 2rem;
+  margin-top: 8rem;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.form-wrapper input {
+  padding: 1rem 3rem;
+}
+
+footer {
+  color: white;
+  background: #2e2e2e;
+  font-family: "Bebas Neue", cursive;
+  font-weight: 400;
+}
+
+.footer-wrapper {
+  display: flex;
+  padding: 2rem;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  min-height: 10vh;
+  flex-wrap: wrap;
+}
+
+footer h5 {
+  flex: 1 1 40rem;
+  padding-bottom: 3rem;
+  align-items: center;
+  color: #f17539;
+
+  align-items: center;
+}
+
+footer ul {
+  display: flex;
+  list-style: none;
+  flex: 1 1 40rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer img {
+  width: 30%;
+  height: 30%;
+  color: white;
+  padding-bottom: 1rem;
+}
+
+@media screen and (max-width: 932px) {
+  nav {
+    text-align: center;
+  }
+  #logo {
+    padding: 1rem;
+
+    justify-content: center;
+  }
+
+  html {
+    font-size: 45%;
+  }
+
+  .form-wrapper {
+    width: 96%;
+  }
+
+  .locations-head h3 {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+  }
+  footer {
+    text-align: center;
+  }
+}
